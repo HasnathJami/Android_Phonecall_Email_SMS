@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ComposeCallSmsEmail">
+
+    <Button
+        android:id="@+id/callId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:text="Compose Call"
+        app:layout_constraintEnd_toStartOf="@+id/smsId"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/smsId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Compose Sms"
+        app:layout_constraintBottom_toBottomOf="@+id/callId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/callId"
+        app:layout_constraintTop_toTopOf="@+id/callId" />
+
+    <AutoCompleteTextView
+        android:id="@+id/messageBodyId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Message Body"
+        android:minHeight="48dp"
+        android:inputType="textAutoComplete"
+        app:layout_constraintEnd_toEndOf="@+id/subjectId"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/subjectId" />
+
+    <EditText
+        android:id="@+id/recipientId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:ems="10"
+        android:hint="Recepient"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/callId" />
+
+    <EditText
+        android:id="@+id/subjectId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Subject"
+        android:inputType="textEmailSubject"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/recipientId" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="78dp" />
+
+    <Button
+        android:id="@+id/composeButtonId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Compose Email"
+        app:layout_constraintEnd_toEndOf="@+id/messageBodyId"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="@+id/messageBodyId"
+        app:layout_constraintTop_toBottomOf="@+id/messageBodyId" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
